@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - ONG Patinhas</title>
-</head>
+    </head>
 <body>
-    <h1>Cadastro - ONG Patinhas</h1>
-    
+    </head>   
+        <h1>ONG Patinhas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastro Voluntário</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastro - ONG Patinhas</h1>
+        <h2>Formulário de Cadastro de Voluntário</h2>
+        <form action="#" method="post">
+        <label for="nome">Nome Completo:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone" required><br><br>
+
+        <label for="interesse">Área de Interesse:</label><br>
+        <select id="interesse" name="interesse" required>
+            <option value="adocao">Trabalho com Adoção</option>
+            <option value="cuidados">Cuidados com Animais</option>
+            <option value="eventos">Organização de Eventos</option>
+            <option value="divulgacao">Divulgação e Marketing</option>
+            <option value="outros">Outros</option>
+        </select><br><br>
+
+        <input type="submit" value="Cadastrar">
 </body>
 </html>
