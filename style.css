@@ -1,0 +1,94 @@
+:root{
+  --bg:#fffbea;
+  --yellow-1:#ffcc33;
+  --yellow-2:#ffb347;
+  --accent:#ff9900;
+  --muted:#222;
+  --focus: #005fcc;
+}
+
+/* Reset simples */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: 'Poppins', Arial, sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Accessibility helpers */
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+.skip-link{
+  position:fixed;left:8px;top:8px;background:#111;color:#fff;padding:8px 12px;border-radius:6px;z-index:999;
+  transform:translateY(-120%);transition:transform .18s ease;
+}
+.skip-link:focus{transform:translateY(0)}
+
+/* Header */
+.site-header{background:var(--yellow-1);position:sticky;top:0;z-index:50;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px}
+.logo{margin:0;font-size:1.4rem}
+
+/* Nav */
+.site-nav{margin-left:auto}
+#navMenuPrincipal{list-style:none;display:flex;gap:14px;padding:0;margin:0;align-items:center}
+#navMenuPrincipal a{
+  display:inline-block;padding:8px 14px;border-radius:10px;text-decoration:none;background:#fff7d6;color:var(--muted);font-weight:600;
+  transition:transform .18s ease, box-shadow .18s ease, background-color .18s;
+  box-shadow:0 2px 0 rgba(0,0,0,.03);
+}
+#navMenuPrincipal a:focus{outline:3px solid var(--focus);outline-offset:3px}
+#navMenuPrincipal a:hover{background:var(--yellow-2);color:#fff;transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.12)}
+
+/* Hamburger (mobile) */
+.menu-toggle{display:none;background:transparent;border:0;padding:8px;cursor:pointer}
+.hamburger{width:24px;height:2px;background:#333;display:inline-block;position:relative}
+.hamburger::before,.hamburger::after{content:"";position:absolute;left:0;width:24px;height:2px;background:#333;display:block}
+.hamburger::before{top:-7px}.hamburger::after{top:7px}
+
+/* Main */
+main{max-width:1100px;margin:18px auto;padding:0 16px}
+.hero img{max-width:100%;height:auto;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+
+/* Headings */
+h2{color:var(--accent);border-left:6px solid var(--yellow-1);padding-left:12px;margin-top:18px}
+
+/* Form */
+form{background:#fff7d6;padding:18px;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.06);max-width:700px;margin:16px auto}
+label{display:block;margin-top:10px;font-weight:600}
+input[type="text"],input[type="email"],input[type="tel"],select{
+  width:100%;padding:10px;border:2px solid var(--yellow-1);border-radius:8px;margin-top:6px;background:#fff;font-size:1rem;
+}
+button, .btn-primary, .btn-ghost{cursor:pointer;border-radius:10px;padding:10px 14px;font-weight:700}
+.btn-primary{background:linear-gradient(180deg,var(--yellow-1),var(--yellow-2));border:0;color:#222}
+.btn-primary:hover{transform:translateY(-3px);color:#fff}
+.btn-ghost{background:transparent;border:2px solid rgba(0,0,0,0.06)}
+
+/* Projetos list */
+.projetos-lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;padding:0;list-style:none}
+.projetos-lista li{background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,.04)}
+
+/* Footer */
+footer{background:var(--yellow-1);padding:12px;text-align:center;font-weight:600;box-shadow:0 -4px 14px rgba(0,0,0,.04);margin-top:26px}
+
+/* Click/tactile */
+.clicado{transform:scale(.96);transition:transform .12s}
+
+/* Scroll animations */
+.invisivel{opacity:0;transform:translateY(18px);transition:all .6s cubic-bezier(.2,.9,.2,1)}
+.animado{opacity:1;transform:none}
+
+/* Focus visible (keyboard) */
+:focus{outline:3px solid var(--focus);outline-offset:3px}
+
+/* Small screens */
+@media (max-width:700px){
+  .menu-toggle{display:inline-flex;margin-left:auto}
+  .site-nav{position:fixed;top:64px;right:12px;background:var(--bg);box-shadow:0 8px 24px rgba(0,0,0,.12);border-radius:10px;padding:12px;display:none}
+  .site-nav.open{display:block}
+  #navMenuPrincipal{flex-direction:column;gap:10px}
+  .header-inner{padding:10px}
+  .skip-link{left:6px;top:6px}
+}

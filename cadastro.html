@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - ONG Patinhas</title>
-    </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro de Voluntário — ONG Patinhas</title>
+  <meta name="description" content="Formulário para se cadastrar como voluntário da ONG Patinhas. Participe das nossas ações e ajude os animais." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    </head>   
-        <h1>ONG Patinhas</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="cadastro.html">Cadastro Voluntário</a></li>
-                <li><a href="projeto.html">Projetos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Cadastro - ONG Patinhas</h1>
-        <h2>Formulário de Cadastro de Voluntário</h2>
-        <form action="#" method="post">
-        <label for="nome">Nome Completo:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
+  <a class="skip-link" href="#formCadastro">Pular para o formulário</a>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <h1 class="logo">ONG Patinhas</h1>
+      <button id="btnMenu" class="menu-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="navMenu" class="site-nav" role="navigation" aria-label="Menu principal">
+        <ul id="navMenuPrincipal">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cadastro.html">Cadastro Voluntário</a></li>
+          <li><a href="projeto.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <label for="telefone">Telefone:</label><br>
-        <input type="tel" id="telefone" name="telefone" required><br><br>
+  <main id="main" tabindex="-1" role="main">
+    <h2>Cadastro - Formulário de Voluntário</h2>
 
-        <label for="interesse">Área de Interesse:</label><br>
-        <select id="interesse" name="interesse" required>
-            <option value="adocao">Trabalho com Adoção</option>
-            <option value="cuidados">Cuidados com Animais</option>
-            <option value="eventos">Organização de Eventos</option>
-            <option value="divulgacao">Divulgação e Marketing</option>
-            <option value="outros">Outros</option>
-        </select><br><br>
+    <form id="formCadastro" action="#" method="post" novalidate aria-describedby="formHelp">
+      <p id="formHelp" class="muted">Campos com <span aria-hidden="true">*</span> são obrigatórios.</p>
 
-        <input type="submit" value="Cadastrar">
-</body>
+      <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+      <input type="text" id="nome" name="nome" required autocomplete="name" aria-required="true">
 
-<footer>
+      <label for="email">Email <span aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
+
+      <label for="telefone">Telefone <span aria-hidden="true">*</span></label>
+      <input type="tel" id="telefone" name="telefone" required placeholder="(11) 91234-5678" inputmode="tel" aria-required="true">
+
+      <label for="interesse">Área de interesse <span aria-hidden="true">*</span></label>
+      <select id="interesse" name="interesse" required aria-required="true">
+        <option value="">-- Selecione --</option>
+        <option value="adocao">Trabalho com adoção</option>
+        <option value="cuidados">Cuidados com animais</option>
+        <option value="eventos">Organização de eventos</option>
+        <option value="divulgacao">Divulgação e marketing</option>
+        <option value="outros">Outros</option>
+      </select>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Cadastrar</button>
+        <button type="reset" class="btn-ghost">Limpar</button>
+      </div>
+
+      <p id="formStatus" role="status" aria-live="polite" class="visually-hidden"></p>
+    </form>
+  </main>
+
+  <footer role="contentinfo">
     <p>&copy; 2025 ONG Patinhas. Todos os direitos reservados.</p>
-</footer>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
 </html>

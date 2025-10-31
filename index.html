@@ -1,60 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-BR ">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Patinhas</title>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ONG Patinhas — Resgate e Adoção de Animais</title>
+    <meta name="description" content="ONG Patinhas — Resgate, cuidado e adoção responsável de animais. Saiba como ajudar, participar como voluntário e acompanhar nossos projetos." />
+    <meta name="keywords" content="ONG, animais, adoção, voluntariado, doações, resgate" />
+    <link rel="canonical" href="https://seudominio.org/index.html" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <meta property="og:title" content="ONG Patinhas — Resgate e Adoção de Animais">
+     <meta property="og:description" content="ONG Patinhas — resgate, cuidado e adoção responsável de animais.">
+     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seudominio.org/index.html">
+     <meta property="og:image" content="placeholder-welcome.jpg">
+  
+     <script type="application/ld+json">
+  {
+        "@context": "https://schema.org",
+         "@type": "NGO",
+        "name": "ONG Patinhas",
+        "url": "https://seudominio.org",
+        "logo": "https://seudominio.org/logo.png",
+        "sameAs": ["https://facebook.com/ongpatinhas","https://instagram.com/ongpatinhas"],
+         "contactPoint": [{
+         "@type": "ContactPoint",
+         "contactType": "customer service",
+         "email": "contato@ongpatinhas.org",
+         "telephone": "+5511912345678",
+         "areaServed": "BR"
+    }]
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>ONG Patinhas</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="cadastro.html">Cadastro Voluntário</a></li>
-                <li><a href="projeto.html">Projetos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header> 
-    <main>
-        <section>
-            <h2>Bem-vindo à ONG Patinhas!</h2>
-            <p>Ong criada para resgate e ajuda de animais abandonados.</p>
-            <img src="" alt="Imagem de boas-vindas">
-        </section>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-    <section>
-        <h2>Nossa missão</h2>
-        <p>Nossa missão é cuidar e proteger os animais abandonados, cuidando e tratando os animais resgatados,dando uma oportunidade de vida nova.</p>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <h1 class="logo">ONG Patinhas</h1>
 
-    
-    </section>
+      <button id="btnMenu" class="menu-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
 
-    <section> 
-        <h2>Como ajudar</h2>
-        <ul>
-            <li>Seja um voluntário: Participe das nossas atividades e ajude no cuidado dos animais.</li>
-            <li>Doe: Contribua com alimentos, medicamentos ou recursos financeiros para apoiar nosso trabalho.</li>
-            <li>Adote: Dê um lar amoroso para um dos nossos animais resgatados.</li>
+      <nav id="navMenu" class="site-nav" role="navigation" aria-label="Menu principal">
+        <ul id="navMenuPrincipal">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cadastro.html">Cadastro Voluntário</a></li>
+          <li><a href="projeto.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Bem-vindo à ONG Patinhas!</h2>
+      <p>Resgatamos, cuidamos e buscamos lares amorosos para cães e gatos abandonados.</p>
+      <!-- imagem com lazy loading e texto alternativo -->
+      <img src="placeholder-welcome.jpg" alt="Voluntária segurando um cão resgatado, ambos felizes" loading="lazy" width="1200" height="700">
     </section>
 
-    <section>
-        <h2>Contato</h2>
-        <p>Entre em contato conosco através dos nossos canais de comunicação: </p>
-        <address>
-            <li>Email: contato@ongpatinhas.org</li>
-            <li>Telefone/Whatsapp: (11) 91234-5678</li>
-            <li>Endereço: Rua dos Animais, 123 - São Paulo, SP</li>
-            <li>Facebook: facebook.com/ongpatinhas </li>
-            <li>Instagram: instagram.com/ongpatinhas</li>
-        </address>
+    <section aria-labelledby="missao-title">
+      <h2 id="missao-title">Nossa missão</h2>
+      <p>Proteger e promover o bem-estar animal por meio de resgates, tratamentos e programas de adoção responsável.</p>
     </section>
-</main>
 
-<footer>
+    <section aria-labelledby="como-ajudar-title">
+      <h2 id="como-ajudar-title">Como ajudar</h2>
+      <ul>
+        <li>Seja um voluntário — participe de atividades de cuidado e resgate.</li>
+        <li>Doe alimentos, medicamentos ou recursos financeiros.</li>
+        <li>Adote — ofereça um lar amoroso.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contato-title">
+      <h2 id="contato-title">Contato</h2>
+      <address>
+        <ul>
+          <li>Email: <a href="mailto:contato@ongpatinhas.org">contato@ongpatinhas.org</a></li>
+          <li>Telefone/Whatsapp: <a href="tel:+5511912345678">(11) 91234-5678</a></li>
+          <li>Endereço: Rua dos Animais, 123 — São Paulo, SP</li>
+        </ul>
+      </address>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
     <p>&copy; 2025 ONG Patinhas. Todos os direitos reservados.</p>
-</footer>
+  </footer>
+
+  <div id="liveRegion" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
